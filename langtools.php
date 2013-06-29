@@ -32,9 +32,9 @@ $GLOBALS['dict'] = json_decode($dict, TRUE);
 function __($label) {
 	$text = "";
 	if(isset($GLOBALS['dict'][$label])):
-		$ext = $GLOBALS['dict'][$label];
+		$text = $GLOBALS['dict'][$label];
 	else:
-		$ext = '['.$label.']';
+		$text = '['.$label.']';
 	endif;
 	return $text;
 }

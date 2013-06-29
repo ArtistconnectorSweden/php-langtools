@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * langtools, a simple language php system
  *
@@ -27,7 +27,8 @@ $fname = 'lang/'.$GLOBALS['lang'].".lang";
 $fil = fopen($fname, 'rb');
 $dict = fread($fil, filesize($fname));
 
-$GLOBALS['dict'] = json_decode($dict, TRUE);
+$GLOBALS['dict'] = json_decode(($dict), TRUE);
+
 
 function __($label) {
 	$text = "";
